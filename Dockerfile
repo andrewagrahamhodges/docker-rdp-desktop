@@ -39,7 +39,7 @@ RUN apt-get update \
         libxfixes-dev \
         gnome-terminal \
         firefox \
-        rsync
+        rsync \
     && cd /tmp \
     && wget --no-check-certificate $xrdp_source \
     && tar -xf xrdp-*.tar.gz -C /tmp/ \
