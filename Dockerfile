@@ -80,9 +80,9 @@ RUN add-apt-repository ppa:numix/ppa \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
 # Install appimageLauncher
-RUN cd /tmp \
-    && wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.1.3/appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb \
-    && dpkg -i appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb
+RUN wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.1.3/appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb \
+    && dpkg -i appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb \
+    && rm appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb
 
 # add the customised files
 ADD ubuntu-files/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
