@@ -40,6 +40,8 @@ RUN apt-get update \
         terminator \
         firefox \
         rsync \
+        libnss3 \
+        libasound2 \
     && cd /tmp \
     && wget --no-check-certificate $xrdp_source \
     && tar -xf xrdp-*.tar.gz -C /tmp/ \
