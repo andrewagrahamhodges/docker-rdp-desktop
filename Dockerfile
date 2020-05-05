@@ -78,11 +78,6 @@ RUN add-apt-repository ppa:numix/ppa \
     && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-    
-# Install appimageLauncher
-RUN wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.1.3/appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb \
-    && dpkg -i appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb \
-    && rm appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb
 
 # add the customised files
 ADD ubuntu-files/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
