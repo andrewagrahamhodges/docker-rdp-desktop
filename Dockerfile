@@ -37,6 +37,9 @@ RUN apt-get update \
         pkg-config \
         file \
         libxfixes-dev \
+        gnome-terminal \
+        firefox \
+        rsync
     && cd /tmp \
     && wget --no-check-certificate $xrdp_source \
     && tar -xf xrdp-*.tar.gz -C /tmp/ \
@@ -74,7 +77,6 @@ RUN apt-get update \
 RUN add-apt-repository ppa:numix/ppa \
     && apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
-        gnome-terminal firefox rsync wget 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
