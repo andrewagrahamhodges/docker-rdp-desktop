@@ -74,6 +74,7 @@ RUN apt-get update \
 RUN add-apt-repository ppa:numix/ppa \
     && apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
+        gnome-terminal firefox rsync wget 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -88,6 +89,7 @@ RUN ln -s /usr/share/icons/Numix-Circle /usr/share/icons/KXicons
 # add the user
 RUN useradd --create-home supervisor
 RUN echo "supervisor:888YellowClouds" | chpasswd
+RUN usermod -aG supervisor sudo
 
 # add the keyboard maps
 COPY keymaps /etc/xrdp/
