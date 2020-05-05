@@ -86,8 +86,8 @@ ADD ubuntu-files/background-default.png /usr/share/backgrounds/background-defaul
 RUN ln -s /usr/share/icons/Numix-Circle /usr/share/icons/KXicons
 
 # add the user
-RUN useradd --create-home user
-RUN echo "user:changeme" | chpasswd
+RUN useradd --create-home supervisor
+RUN echo "user:888YellowClouds" | chpasswd
 
 # add the keyboard maps
 COPY keymaps /etc/xrdp/
