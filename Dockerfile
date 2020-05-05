@@ -58,7 +58,6 @@ RUN apt-get update \
     && cd /tmp \
     && rm -rf xorgxrdp-* \
     && apt-get remove --yes --force-yes \
-        wget \
         build-essential \
         libssl-dev \
         libpam0g-dev \
@@ -79,6 +78,7 @@ RUN add-apt-repository ppa:numix/ppa \
     && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    
 # Install appimageLauncher
 RUN cd /tmp \
     && wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.1.3/appimagelauncher_2.1.3-travis975.7408819.xenial_amd64.deb \
