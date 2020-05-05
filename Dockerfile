@@ -37,7 +37,7 @@ RUN apt-get update \
         pkg-config \
         file \
         libxfixes-dev \
-        gnome-terminal \
+        terminator \
         firefox \
         rsync \
     && cd /tmp \
