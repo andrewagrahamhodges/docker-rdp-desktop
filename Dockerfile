@@ -103,7 +103,7 @@ RUN echo "root:122SleepyHollow" | chpasswd
 
 # Install additional packages
 RUN wget https://downloads.mongodb.com/compass/mongodb-compass_1.21.0_amd64.deb \
-    && dpkg -i mongodb-compass_1.21.0_amd64.deb \
+    && apt install -y ./mongodb-compass_1.21.0_amd64.deb \
     && rm -f mongodb-compass_1.21.0_amd64.deb
 
 # add the keyboard maps
