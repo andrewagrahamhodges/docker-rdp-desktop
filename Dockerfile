@@ -87,12 +87,6 @@ RUN ln -s /usr/share/icons/Numix-Circle /usr/share/icons/KXicons
 # add the user
 RUN useradd --create-home supervisor
 RUN echo "supervisor:888YellowClouds" | chpasswd
-RUN echo "root:122SleepyHollow" | chpasswd
-
-# Install additional packages
-RUN wget https://downloads.mongodb.com/compass/mongodb-compass_1.21.0_amd64.deb \
-    && apt install -y ./mongodb-compass_1.21.0_amd64.deb \
-    && rm -f mongodb-compass_1.21.0_amd64.deb
 
 # add the keyboard maps
 COPY keymaps /etc/xrdp/
