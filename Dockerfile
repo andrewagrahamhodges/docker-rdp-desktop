@@ -84,7 +84,7 @@ RUN add-apt-repository ppa:numix/ppa \
 # Install Openssh
 RUN apt-get update \
     && apt-get install --yes --force-yes --no-install-recommends \
-        openssh \
+        openssh-server \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
