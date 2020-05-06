@@ -59,18 +59,6 @@ RUN apt-get update \
     && make install \
     && cd /tmp \
     && rm -rf xorgxrdp-* \
-    && apt-get remove --yes --force-yes \
-        build-essential \
-        libssl-dev \
-        libpam0g-dev \
-        libxrandr-dev \
-        nasm \
-        xserver-xorg-dev \
-        libxfont1-dev \
-        pkg-config \
-        file \
-        libxfixes-dev \
-    && apt-get --yes autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
